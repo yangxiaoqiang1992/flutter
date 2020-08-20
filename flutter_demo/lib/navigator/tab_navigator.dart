@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/pages/home_page.dart';
 import 'package:flutter_demo/pages/my_page.dart';
+import 'package:flutter_demo/pages/travel_page.dart';
 
 class TabNavigator extends StatefulWidget {
   @override
@@ -16,9 +17,9 @@ class _TabNavigatorState extends State<TabNavigator> {
   Widget build(BuildContext context) {
     return new Scaffold(
       body: PageView(
-        controller: _controller,
-        children: <Widget>[HomePage(), MyPage()],
-      ),
+          controller: _controller,
+          children: <Widget>[HomePage(), TravelPage(), MyPage()],
+          physics: NeverScrollableScrollPhysics()),
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           currentIndex: _currentIndex,
@@ -33,6 +34,10 @@ class _TabNavigatorState extends State<TabNavigator> {
                 icon: Icon(Icons.home, color: _defaultColor),
                 title: Text('首页'),
                 activeIcon: Icon(Icons.home, color: _activeColor)),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.camera_alt, color: _defaultColor),
+                title: Text('旅拍'),
+                activeIcon: Icon(Icons.camera_alt, color: _activeColor)),
             BottomNavigationBarItem(
                 icon: Icon(Icons.account_circle, color: _defaultColor),
                 title: Text('我的'),
