@@ -1,0 +1,152 @@
+{
+    "type": 1,
+    "article": {
+        "articleId": 4117994,
+        "productType": 5,
+        "sourceType": 5,
+        "articleTitle": "如何申请Harnas的志愿者",
+        "articleDesc": "关于Harnas志愿者\n自从花儿与少年播出以后，很多人对报名...",
+        "content": "",
+        "author": {
+            "authorId": 397995,
+            "nickName": "果小桃",
+            "clientAuth": "70858C4A7AE0BEFEB05442C659DFBC74",
+            "userUrl": "https://m.ctrip.com/webapp/you/tripshoot/user/home?seo=0&clientAuth=70858C4A7AE0BEFEB05442C659DFBC74&isHideHeader=true&isHideNavBar=YES",
+            "jumpUrl": "https://m.ctrip.com/webapp/you/user?clientAuth=70858C4A7AE0BEFEB05442C659DFBC74",
+            "coverImage": {
+                "dynamicUrl": "https://dimg04.c-ctrip.com/images/Z80r15000000xbst0F8B2_C_180_180.jpg",
+                "originalUrl": "https://dimg04.c-ctrip.com/images/Z80r15000000xbst0F8B2_C_180_180.jpg"
+            },
+            "identityType": 13,
+            "identityTypeName": "签约旅行家",
+            "tag": "",
+            "userTags": [
+                {
+                    "tagType": 1,
+                    "tagName": "自驾旅行达人",
+                    "tagDesc": "",
+                    "appUrl": "https://m.ctrip.com/webapp/you/tsnap/talentAreaIndex.html?isHideNavBar=yes&popup=close&activityid=199&allianceid=&sid=&ouid=",
+                    "h5Url": "https://m.ctrip.com/webapp/you/tsnap/talentAreaIndex.html?isHideNavBar=yes&popup=close&activityid=199&allianceid=&sid=&ouid=",
+                    "wxUrl": "https://m.ctrip.com/webapp/you/tsnap/talentAreaIndex.html?isHideNavBar=yes&popup=close&activityid=199&allianceid=&sid=&ouid="
+                },
+                {
+                    "tagType": 2,
+                    "tagName": "瑞士资深玩家",
+                    "tagDesc": "",
+                    "appUrl": "https://m.ctrip.com/webapp/you/tsnap/talentAreaIndex.html?isHideNavBar=yes&popup=close&activityid=199&allianceid=&sid=&ouid=",
+                    "h5Url": "https://m.ctrip.com/webapp/you/tsnap/talentAreaIndex.html?isHideNavBar=yes&popup=close&activityid=199&allianceid=&sid=&ouid=",
+                    "wxUrl": "https://m.ctrip.com/webapp/you/tsnap/talentAreaIndex.html?isHideNavBar=yes&popup=close&activityid=199&allianceid=&sid=&ouid="
+                }
+            ],
+            "followCount": 114464
+        },
+        "images": [
+            {
+                "imageId": 298242492,
+                "dynamicUrl": "https://youimg1.c-ctrip.com/target/10070y000000mum4o17F6_R_800_10000_Q50.jpg?proc=source/tripshoot",
+                "originalUrl": "https://youimg1.c-ctrip.com/target/10070y000000mum4o17F6.jpg",
+                "width": 1280.0,
+                "height": 854.0,
+                "mediaType": 0,
+                "lat": 0.0,
+                "lon": 0.0,
+                "isWaterMarked": false
+            }
+        ],
+        "hasVideo": false,
+        "readCount": 1607,
+        "likeCount": 52,
+        "commentCount": 4,
+        "shareCount": 0,
+        "urls": [
+            {
+                "version": "article",
+                "appUrl": "ctrip://wireless/h5?page=index.html#detail/4117994.html&path=destination/article&navBarStyle=white",
+                "h5Url": "https://m.ctrip.com/webapp/you/article/detail/4117994.html",
+                "wxUrl": "/pages/article/detail?articleId=4117994"
+            },
+            {
+                "version": "tripShoot",
+                "appUrl": "ctrip://wireless/h5?type=5&url=L3JuX2Rlc3RpbmF0aW9uX3ZpZGVvL21haW4uanM/Q1JOTW9kdWxlTmFtZT1kZXN0aW5hdGlvbmxpdmUmQ1JOVHlwZT0xJmluaXRpYWxQYWdlPXRyYXZlbFJlY29yZF9kZXRhaWwmaWQ9NDExNzk5NA==",
+                "h5Url": "https://m.ctrip.com/webapp/you/tripshoot/paipai/detail/detail?articleId=4117994&seo=0",
+                "wxUrl": "/pages/detail/detail?articleId=4117994"
+            },
+            {
+                "version": "tripShoot2",
+                "appUrl": "ctrip://wireless/h5?type=5&url=L3JuX2Rlc3RpbmF0aW9uX3ZpZGVvL21haW4uanM/Q1JOTW9kdWxlTmFtZT1kZXN0aW5hdGlvbmxpdmUmQ1JOVHlwZT0xJmluaXRpYWxQYWdlPXRyYXZlbFJlY29yZF9kZXRhaWwmaWQ9NDExNzk5NA==",
+                "h5Url": "https://m.ctrip.com/webapp/you/tripshoot/paipai/detail/detail?articleId=4117994&seo=0",
+                "wxUrl": "/pages/you/lvpai/detail/detail?articleId=4117994"
+            }
+        ],
+        "tags": [],
+        "topics": [
+            {
+                "topicId": 512,
+                "topicName": "旅行干货",
+                "level": 1
+            }
+        ],
+        "relatedTopics": [
+            {
+                "topicId": 512,
+                "topicName": "旅行干货",
+                "type": 2
+            }
+        ],
+        "pois": [
+            {
+                "poiType": 50,
+                "poiId": 30217058,
+                "poiName": "哈那斯野生动物营地",
+                "businessId": 3724948,
+                "districtId": 22007,
+                "poiExt": {
+                    "h5Url": "https://m.ctrip.com/webapp/you/tripshoot/paipai/poiPage/poiHome?poiId=30217058&poiType=50&isHideHeader=true&isHideNavBar=YES&seo=0",
+                    "appUrl": "https://m.ctrip.com/webapp/you/tripshoot/paipai/poiPage/poiHome?poiId=30217058&poiType=50&isHideHeader=true&isHideNavBar=YES&seo=0"
+                },
+                "source": 2,
+                "isMain": 0,
+                "isInChina": false,
+                "countryName": "纳米比亚"
+            },
+            {
+                "poiType": 4,
+                "poiId": 22007,
+                "poiName": "戈巴比斯",
+                "districtId": 22007,
+                "districtName": "戈巴比斯",
+                "districtENName": "Gobabis",
+                "poiExt": {
+                    "h5Url": "https://m.ctrip.com/webapp/you/tripshoot/paipai/poiPage/poiHome?poiId=22007&poiType=4&isHideHeader=true&isHideNavBar=YES&seo=0",
+                    "appUrl": "https://m.ctrip.com/webapp/you/tripshoot/paipai/poiPage/poiHome?poiId=22007&poiType=4&isHideHeader=true&isHideNavBar=YES&seo=0"
+                },
+                "source": 2,
+                "isMain": 0,
+                "isInChina": false
+            }
+        ],
+        "publishTime": "2018-11-28 15:53:54",
+        "publishTimeDisplay": "2018-11-28",
+        "shootTime": "2018-11-28 15:53:54",
+        "shootTimeDisplay": "2018-11-28",
+        "sourceInfo": "855583",
+        "level": 4,
+        "distanceText": "",
+        "isLike": false,
+        "imageCounts": 9,
+        "isCollected": false,
+        "collectCount": 2,
+        "articleStatus": 2,
+        "poiName": "戈巴比斯",
+        "shareInfo": {
+            "imageUrl": "https://youimg1.c-ctrip.com/target/10070y000000mum4o17F6_C_454_358_Q90.jpg?proc=source/tripshoot",
+            "shareTitle": "果小桃在哈那斯野生动物营地发了一篇超赞的旅拍，快来围观！",
+            "shareContent": "关于Harnas志愿者自从花儿",
+            "platForm": "all",
+            "token": "9737eead1c694aa59d3934cfd385e94e"
+        },
+        "currentDate": "2020.08.23",
+        "sourceId": 0,
+        "videoAutoplayNet": "\"wifi,4g,5g\""
+    }
+}

@@ -16,10 +16,13 @@ class _TabNavigatorState extends State<TabNavigator> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      body: PageView(
-          controller: _controller,
-          children: <Widget>[HomePage(), TravelPage(), MyPage()],
-          physics: NeverScrollableScrollPhysics()),
+      body: SafeArea(
+          //解决上边距问题：SafeArea
+          top: true,
+          child: PageView(
+              controller: _controller,
+              children: <Widget>[HomePage(), TravelPage(), MyPage()],
+              physics: NeverScrollableScrollPhysics())),
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           currentIndex: _currentIndex,
