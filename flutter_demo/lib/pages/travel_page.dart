@@ -26,7 +26,7 @@ class _TravelPageState extends State<TravelPage> with TickerProviderStateMixin {
         travelTabModel = model;
       });
     });
-    
+
     super.initState();
   }
 
@@ -60,7 +60,10 @@ class _TravelPageState extends State<TravelPage> with TickerProviderStateMixin {
         Flexible(
             child: TabBarView(
                 controller: _controller,
-                children: tabs.map((Tabs tab) => TravelTabPage()).toList()))
+                children: tabs
+                    .map((Tabs tab) =>
+                        TravelTabPage(groupChannelCode: tab.groupChannelCode))
+                    .toList()))
       ],
     ));
   }

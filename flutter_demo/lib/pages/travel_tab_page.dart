@@ -4,6 +4,7 @@ import 'package:flutter_demo/model/travel_model.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 const PAGE_SIZE = 10;
+var pageIndex = 1;
 
 class TravelTabPage extends StatefulWidget {
   final String url;
@@ -16,13 +17,15 @@ class TravelTabPage extends StatefulWidget {
 
 class _TravelTabPageState extends State<TravelTabPage> {
   List<TravelArticle> resultList = [];
+  ScrollController _scrollController = new ScrollController();
   @override
   void initState() {
-    TravelDao.fetch(pageIndex: 1, pageSize: 10, groupChannelCode: 'ycy422')
-        .then((TravelModel model) {
-      setState(() {
-        resultList = model.resultList;
-      });
+    _loadData();
+    _scrollController.addListener(() {
+      if (_scrollController.position.pixels ==
+          _scrollController.position.maxScrollExtent) {
+        _loadData(loadMore: true);
+      }
     });
     super.initState();
   }
@@ -30,16 +33,44 @@ class _TravelTabPageState extends State<TravelTabPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: new StaggeredGridView.countBuilder(
-      primary: false,
-      crossAxisCount: 4,
-      itemCount: resultList?.length,
-      itemBuilder: (BuildContext context, int index) =>
-          _TravelItem(index: index, item: resultList[index]),
-      staggeredTileBuilder: (index) => StaggeredTile.fit(2),
-      // staggeredTileBuilder: (int index) =>
-      //     new StaggeredTile.count(2, index.isEven ? 2 : 1),
-    ));
+        body: RefreshIndicator(
+            child: new StaggeredGridView.countBuilder(
+              controller: _scrollController,
+              primary: false,
+              crossAxisCount: 4,
+              itemCount: resultList?.length,
+              itemBuilder: (BuildContext context, int index) =>
+                  _TravelItem(index: index, item: resultList[index]),
+              staggeredTileBuilder: (index) => StaggeredTile.fit(2),
+              // staggeredTileBuilder: (int index) =>
+              //     new StaggeredTile.count(2, index.isEven ? 2 : 1),
+            ),
+            onRefresh: _refreshHandler));
+  }
+
+  void _loadData({loadMore = false}) {
+    if (loadMore) {
+      pageIndex++;
+    } else {
+      pageIndex = 1;
+    }
+    TravelDao.fetch(
+            pageIndex: pageIndex,
+            pageSize: PAGE_SIZE,
+            groupChannelCode: widget.groupChannelCode)
+        .then((TravelModel model) {
+      setState(() {
+        if (pageIndex != 1) {
+          resultList.addAll(model.resultList);
+        } else {
+          resultList = model.resultList;
+        }
+      });
+    });
+  }
+
+  Future<void> _refreshHandler() async {
+    _loadData();
   }
 }
 
@@ -70,7 +101,10 @@ class _TravelItem extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
-                )
+                ),
+                Container(
+                    padding: EdgeInsets.all(5),
+                    child: _authorInfo(item.article))
               ],
             ),
           ),
@@ -79,6 +113,47 @@ class _TravelItem extends StatelessWidget {
           //todo:跳转详情页面
         },
       ),
+    );
+  }
+
+  _authorInfo(Article article) {
+    final author = article.author;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        Container(
+          child: Row(children: <Widget>[
+            PhysicalModel(
+              color: Colors.transparent,
+              clipBehavior: Clip.antiAlias,
+              borderRadius: BorderRadius.circular(20),
+              child: Image.network(author.coverImage.dynamicUrl,
+                  width: 20, height: 20),
+            ),
+            LimitedBox(
+                maxWidth: 100,
+                child: Padding(
+                  padding: EdgeInsets.only(left: 5),
+                  child: Text(author.nickName,
+                      style: TextStyle(fontSize: 12),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1),
+                ))
+          ]),
+        ),
+        Container(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Icon(Icons.thumb_up, color: Colors.grey, size: 16),
+              Padding(
+                  padding: EdgeInsets.only(left: 3),
+                  child: Text(article.likeCount.toString(),
+                      style: TextStyle(color: Colors.black87, fontSize: 11)))
+            ],
+          ),
+        )
+      ],
     );
   }
 }
