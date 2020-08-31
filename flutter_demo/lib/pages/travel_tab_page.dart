@@ -15,7 +15,8 @@ class TravelTabPage extends StatefulWidget {
   _TravelTabPageState createState() => _TravelTabPageState();
 }
 
-class _TravelTabPageState extends State<TravelTabPage> {
+class _TravelTabPageState extends State<TravelTabPage>
+    with AutomaticKeepAliveClientMixin {
   List<TravelArticle> resultList = [];
   ScrollController _scrollController = new ScrollController();
   @override
@@ -72,6 +73,9 @@ class _TravelTabPageState extends State<TravelTabPage> {
   Future<void> _refreshHandler() async {
     _loadData();
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
 
 class _TravelItem extends StatelessWidget {
